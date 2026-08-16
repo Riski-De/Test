@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NP STORE — Digital Gaming Store</title>
+<style>
+:root{--bg:#08090a;--panel:#101214;--panel2:#151719;--line:#25282b;--text:#f5f5f5;--muted:#9da1a6;--yellow:#ffd400;--yellow2:#ffeb63;--red:#ff3d57;--shadow:0 12px 35px #0008}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 75% 0,#27200a22,transparent 35%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0}.app{display:flex;min-height:100vh}.sidebar{position:fixed;left:0;top:0;bottom:0;width:194px;background:linear-gradient(180deg,#0d0f10,#090a0b);border-right:1px solid var(--line);padding:22px 18px;z-index:40}.brand{text-align:center}.avatar{width:76px;height:76px;object-fit:cover;border-radius:50%;display:block;margin:0 auto 10px;box-shadow:0 0 0 3px #151515,0 0 24px #ffd40055}.brand h1{margin:0;font-size:22px;font-style:italic}.brand h1 b{color:var(--yellow)}.brand p{font-size:11px;color:var(--muted);margin:5px 0 22px}.menu{display:grid;gap:5px}.menu button{display:flex;align-items:center;gap:12px;color:#ddd;background:transparent;padding:11px 10px;border-radius:10px;text-align:left}.menu button:hover,.menu button.active{background:#1a1c1f;color:var(--yellow)}.menu .ico{width:24px;text-align:center;font-size:18px}.divider{height:1px;background:var(--line);margin:15px 2px}.help{position:absolute;left:18px;right:18px;bottom:20px;background:#17191b;border:1px solid #292c30;border-radius:12px;padding:12px}.help b{font-size:12px}.help small{display:block;color:var(--muted);margin:5px 0 9px}.help button{width:100%;background:#27240d;color:var(--yellow);padding:8px;border-radius:8px;font-weight:800}.main{margin-left:194px;width:calc(100% - 194px)}.top{height:70px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:18px;padding:0 26px;position:sticky;top:0;background:#090a0bea;backdrop-filter:blur(16px);z-index:30}.hamb{display:none;background:none;color:#fff;font-size:26px}.mobile-brand{display:none}.search{max-width:520px;flex:1;margin:auto;display:flex;align-items:center;background:#151719;border:1px solid #282b2f;border-radius:13px;padding:0 14px}.search span{color:#aaa;font-size:22px}.search input{width:100%;border:0;outline:0;background:transparent;color:#fff;padding:12px}.top-actions{display:flex;gap:10px;align-items:center}.icon-btn{width:40px;height:40px;border-radius:11px;background:#121416;color:#eee;border:1px solid #292c30;position:relative}.cart-badge{position:absolute;right:-4px;top:-4px;background:var(--yellow);color:#111;font-size:10px;font-weight:900;border-radius:10px;padding:2px 5px}.dev{background:var(--yellow);color:#111;border-radius:10px;padding:10px 14px;font-weight:900}.content{padding:24px 26px 0;max-width:1180px;margin:auto}.preview{background:#211e0c;border:1px solid #5a4c0a;color:#e7d55b;border-radius:10px;padding:9px 12px;text-align:center;font-size:12px;margin-bottom:16px}.hero{height:285px;border-radius:15px;overflow:hidden;background:#111 url('assets/hero.svg') center/cover no-repeat;border:1px solid #272a2d;position:relative}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#08090aee 0%,#08090a9a 45%,transparent 80%)}.hero-copy{position:relative;z-index:2;padding:42px 56px;max-width:620px}.hero-copy small{font-size:13px}.hero-copy h2{font-size:46px;line-height:.95;margin:14px 0}.hero-copy h2 b{color:var(--yellow)}.hero-copy p{font-weight:700;line-height:1.45}.hero-line{width:42px;height:3px;background:var(--yellow);margin-top:20px}.section-head{display:flex;justify-content:space-between;align-items:center;margin:28px 0 13px}.section-head h2{font-size:18px;margin:0}.link{color:var(--yellow);font-weight:800;background:none}.categories{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.cat{position:relative;min-height:285px;padding:0!important;overflow:hidden;background:#111;border:1px solid #303338;border-radius:16px;text-align:left;color:#fff;display:flex;align-items:flex-end;isolation:isolate;transition:transform .18s,border-color .18s,box-shadow .18s}.cat:hover{transform:translateY(-3px);border-color:#ffd400;box-shadow:0 12px 30px #0008}.cat:hover .cat-bg{transform:scale(1.06)}.cat .cat-bg{position:absolute;inset:0;background-size:cover;background-position:center;z-index:-2;transform:scale(1.02);transition:transform .25s}.cat:after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.04) 20%,rgba(0,0,0,.12) 42%,rgba(0,0,0,.94) 100%);z-index:-1}.cat .cat-content{width:100%;padding:18px 18px 16px;position:relative;z-index:2}.cat .catico{display:none}.cat b{display:block;font-size:21px;line-height:1.05;color:var(--yellow);text-shadow:0 2px 8px #000;margin-bottom:10px}.cat small{display:block;color:var(--yellow);font-weight:900;font-size:14px;text-shadow:0 2px 6px #000}.product-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.product{background:linear-gradient(180deg,#17191b,#101214);border:1px solid #292c2f;border-radius:13px;overflow:hidden;transition:.18s;position:relative}.product:hover{transform:translateY(-3px);border-color:#4e470d}.pic{height:175px;background:#0e1011;overflow:hidden;position:relative}.pic img{width:100%;height:100%;object-fit:cover;display:block}.pic:after{content:"";position:absolute;inset:55% 0 0;background:linear-gradient(transparent,#0b0c0d)}.topbadge{position:absolute;z-index:2;left:8px;top:8px;background:var(--yellow);color:#111;padding:4px 7px;border-radius:5px;font-size:10px;font-weight:900}.pbody{padding:12px}.pbody h3{font-size:14px;margin:0 0 7px}.rating{font-size:12px;color:#eee}.rating span{color:var(--yellow)}.price{color:var(--yellow);font-weight:900;margin-top:8px}.tag{float:right;color:#ccc;background:#25272a;border-radius:8px;padding:4px 7px;font-size:10px}.stock{color:var(--muted);font-size:11px;margin-top:7px}.buy{width:100%;margin-top:10px;background:var(--yellow);color:#111;padding:9px;border-radius:8px;font-weight:900}.buy:disabled{opacity:.35}.filters{display:flex;gap:8px;flex-wrap:wrap}.filter{background:#202225;color:#ccc;border-radius:18px;padding:8px 14px}.filter.active{background:var(--yellow);color:#111;font-weight:900}.sort{background:#151719;border:1px solid #292c2f;color:#ddd;border-radius:8px;padding:8px 10px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:40px}.footer{border-top:1px solid var(--line);padding:34px 26px;background:#090a0b;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px}.footer h3{font-size:12px;margin:0 0 12px}.footer p,.footer li{font-size:12px;color:#999;line-height:1.8}.footer ul{list-style:none;padding:0;margin:0}.footer-brand{display:flex;align-items:center;gap:10px}.footer-brand img{width:45px;height:45px;border-radius:50%;display:block;object-fit:cover;box-shadow:0 0 0 2px #181818,0 0 18px #ffd40033}.footer-brand b{color:var(--yellow);font-style:italic}.footer-bottom{grid-column:1/-1;border-top:1px solid var(--line);padding-top:15px;text-align:center;color:#666;font-size:11px}.mobile-nav{display:none}.drawer-close{display:none;position:absolute;right:12px;top:12px;width:38px;height:38px;border-radius:10px;background:#1b1d20;border:1px solid #303338;color:#fff;font-size:26px;line-height:1}.drawer-overlay{display:none}
+
+.cart-drawer{position:fixed;top:0;right:0;width:min(430px,94vw);height:100vh;background:#101214;border-left:1px solid #303338;z-index:120;transform:translateX(105%);transition:transform .25s ease;box-shadow:-20px 0 55px #0009;display:flex;flex-direction:column}
+.cart-drawer.show{transform:translateX(0)}
+.cart-overlay{position:fixed;inset:0;background:#0009;z-index:110;display:none}
+.cart-overlay.show{display:block}
+.cart-head{display:flex;align-items:center;justify-content:space-between;padding:17px 18px;border-bottom:1px solid #292c30;background:#121416}
+.cart-head h2{margin:0;font-size:19px}
+.cart-close{width:36px;height:36px;border-radius:10px;background:#222529;color:#fff;border:1px solid #303338;font-size:22px}
+.cart-items{flex:1;overflow:auto;padding:12px}
+.cart-empty{min-height:55vh;display:grid;place-items:center;text-align:center;color:#8f949a;padding:30px}
+.cart-empty strong{display:block;color:#fff;font-size:18px;margin-bottom:7px}
+.cart-item{display:grid;grid-template-columns:66px 1fr auto;gap:11px;align-items:center;background:#17191b;border:1px solid #292c30;border-radius:12px;padding:10px;margin-bottom:9px}
+.cart-item-img{width:66px;height:66px;border-radius:9px;overflow:hidden;background:#0c0d0e}
+.cart-item-img img{width:100%;height:100%;object-fit:cover}
+.cart-item h3{font-size:13px;margin:0 0 4px}
+.cart-item .meta{font-size:11px;color:#969ba1}
+.cart-item .cart-price{color:var(--yellow);font-weight:900;font-size:12px;margin-top:5px}
+.cart-item-actions{display:flex;align-items:center;gap:5px;margin-top:7px}
+.cart-item-actions button{width:25px;height:25px;border-radius:7px;background:#25282b;color:#fff}
+.cart-item-actions span{min-width:22px;text-align:center;font-size:12px;font-weight:900}
+.cart-remove{align-self:start;background:none!important;color:#777!important;font-size:17px}
+.cart-foot{border-top:1px solid #292c30;padding:14px 16px;background:#0d0f10}
+.cart-total{display:flex;justify-content:space-between;align-items:center;font-weight:900;margin-bottom:11px}
+.cart-total strong{color:var(--yellow);font-size:20px}
+.cart-checkout{width:100%;background:var(--yellow);color:#111;border-radius:10px;padding:12px;font-weight:900}
+.cart-clear{width:100%;margin-top:8px;background:#222528;color:#bbb;border-radius:10px;padding:9px;font-size:12px}
+.add-cart{width:100%;margin-top:8px;background:#24272a;color:var(--yellow);border:1px solid #4c440d;padding:9px;border-radius:8px;font-weight:900}
+.checkout-cart-btn{width:calc(100% - 36px);margin:0 18px 10px;padding:12px;background:#24272a;color:var(--yellow);border:1px solid #4c440d;border-radius:10px;font-weight:900}
+.cart-toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:#17191b;border:1px solid #4a430f;color:#fff;padding:10px 15px;border-radius:10px;z-index:140;opacity:0;pointer-events:none;transition:.2s;box-shadow:0 8px 30px #0008;font-size:12px}
+.cart-toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:760px){.cart-drawer{width:100%;max-width:none}.cart-item{grid-template-columns:58px 1fr auto}.cart-item-img{width:58px;height:58px}}
+
+.modal{position:fixed;inset:0;background:#000b;display:none;align-items:center;justify-content:center;z-index:100;padding:18px}.modal.show{display:flex}.box,.checkout-box{background:#121416;border:1px solid #303338;border-radius:16px;width:min(600px,100%);max-height:92vh;overflow:auto;box-shadow:var(--shadow)}.box{padding:22px}.close{float:right;background:#222529;color:#fff;border-radius:50%;width:34px;height:34px}.field{margin:12px 0}.field label{display:block;font-weight:800;font-size:13px;margin-bottom:6px}.field input,.field select,.field textarea{width:100%;padding:10px;background:#0e1011;border:1px solid #303338;color:#fff;border-radius:8px;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--yellow)}.actions{display:flex;gap:8px;justify-content:flex-end}.primary{background:var(--yellow);color:#111;padding:10px 15px;border-radius:8px;font-weight:900}.admin{display:none}.admin.show{display:block}.adminbar{background:#111416;border-bottom:1px solid var(--line);padding:13px 20px}.admin-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:15px}.panel{background:#121416;border:1px solid #292c30;border-radius:13px;padding:18px}.panel h2{margin-top:0;font-size:18px}table{width:100%;border-collapse:collapse}th,td{padding:9px;border-bottom:1px solid #292c30;text-align:left;font-size:12px}.small{padding:7px 9px;border-radius:7px;background:#24272a;color:#eee}.danger{background:#3a161c;color:#ff7c8c}
+.checkout-head{position:sticky;top:0;background:#121416;z-index:2;display:flex;align-items:center;justify-content:space-between;padding:15px 18px;border-bottom:1px solid var(--line)}.checkout-head h2{margin:0}.back-btn{background:none;color:#fff;font-size:25px}.checkout-product{display:flex;gap:14px;padding:18px;border-bottom:1px solid var(--line)}.checkout-image{width:90px;height:90px;border-radius:12px;overflow:hidden;background:#0e1011}.checkout-image img{width:100%;height:100%;object-fit:cover}.checkout-section{padding:16px 18px;border-bottom:1px solid var(--line)}.section-title{font-weight:900;margin-bottom:10px}.desc{color:#9da1a6;line-height:1.55;margin:0}.feature-list{display:flex;gap:7px;flex-wrap:wrap}.feature{background:#222528;border:1px solid #303338;border-radius:8px;padding:7px 9px;font-size:12px}.duration-list{display:grid;gap:8px}.duration{background:#17191b;color:#fff;border:1px solid #303338;border-radius:10px;padding:12px;display:flex;justify-content:space-between;text-align:left}.duration.selected{border-color:var(--yellow);background:#211f10}.duration:disabled{opacity:.4}.d-price{color:var(--yellow);font-weight:900}.bonus{font-size:11px;color:#aaa}.quantity-row{display:flex;justify-content:space-between;align-items:center}.stepper{display:flex;border:1px solid #303338;border-radius:9px;overflow:hidden}.stepper button{width:38px;background:#222528;color:#fff}.stepper span{min-width:40px;display:grid;place-items:center;font-weight:900}.checkout-input{width:100%;padding:12px;background:#0e1011;color:#fff;border:1px solid #303338;border-radius:8px}.checkout-total{display:flex;justify-content:space-between;padding:18px;font-weight:900}.checkout-total strong{color:var(--yellow);font-size:21px}.checkout-order{width:calc(100% - 36px);margin:0 18px 18px;padding:13px;background:var(--yellow);color:#111;border-radius:10px;font-weight:900}
+@media(max-width:1050px){.sidebar{width:175px}.main{margin-left:175px;width:calc(100% - 175px)}.product-row,.grid{grid-template-columns:repeat(3,1fr)}.footer{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.sidebar{display:none}.sidebar.open{display:block;width:285px;box-shadow:20px 0 50px #000b}.drawer-close{display:block}.drawer-overlay{position:fixed;inset:0;background:#0009;z-index:35}.drawer-overlay.show{display:block}.main{margin-left:0;width:100%}.top{height:62px;padding:0 12px;gap:8px}.hamb{display:block}.mobile-brand{display:flex;align-items:center;gap:7px;font-weight:900}.mobile-brand img{width:32px;height:32px;border-radius:50%}.mobile-brand b{color:var(--yellow);font-style:italic}.search{order:3;max-width:none;width:100%}.top{flex-wrap:wrap;height:auto;padding-top:8px;padding-bottom:8px}.top-actions{margin-left:auto}.top-actions .dev{display:none}.content{padding:14px 12px 0}.hero{height:205px}.hero-copy{padding:28px 24px}.hero-copy h2{font-size:33px}.categories{gap:10px}.cat{min-height:245px}.cat .cat-content{padding:15px}.cat b{font-size:17px}.cat small{font-size:12px}.product-row{grid-template-columns:repeat(2,1fr);gap:9px}.grid{grid-template-columns:repeat(2,1fr);gap:9px}.pic{height:145px}.section-head{margin-top:22px}.footer{display:block;padding:28px 18px}.footer>div{margin-bottom:22px}.mobile-nav{position:fixed;display:grid;grid-template-columns:repeat(3,1fr);left:10px;right:10px;bottom:10px;background:#111315ee;border:1px solid #303338;border-radius:15px;z-index:45;backdrop-filter:blur(14px)}.mobile-nav button{background:none;color:#aaa;padding:10px 5px;font-size:11px}.mobile-nav button.active{color:var(--yellow)}.mobile-nav span{display:block;font-size:20px}.admin-grid{grid-template-columns:1fr}.admin{padding-bottom:80px}.help{display:none}}
+
+.hierarchy{margin-top:18px}.hierarchy-head{display:flex;align-items:center;gap:14px;margin-bottom:16px}.hierarchy-back{width:44px;height:44px;border-radius:12px;background:#17191b;border:1px solid #292c2f;color:#fff;font-size:24px}.hierarchy-title{font-size:22px;font-weight:900}.hierarchy-sub{font-size:12px;color:var(--muted);margin-top:4px}.hierarchy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.hier-card{background:linear-gradient(145deg,#17191b,#101214);border:1px solid #292c2f;border-radius:15px;padding:20px;display:flex;align-items:center;gap:14px;text-align:left;color:#fff;cursor:pointer}.hier-card:hover{border-color:#6a5c0b;transform:translateY(-2px)}.hier-icon{width:58px;height:58px;border-radius:12px;overflow:hidden;background:#0e1011;flex:none}.hier-icon img{width:100%;height:100%;object-fit:cover}.hier-card b{font-size:15px}.hier-card small{display:block;color:var(--muted);margin-top:5px}.hier-arrow{margin-left:auto;color:var(--yellow);font-size:24px}.home-products.hidden{display:none}@media(max-width:800px){.hierarchy-grid{grid-template-columns:1fr 1fr}}@media(max-width:560px){.hierarchy-grid{grid-template-columns:1fr}.hierarchy-title{font-size:19px}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <button class="drawer-close" aria-label="Tutup menu" onclick="closeDrawer()">×</button>
+  <div class="brand"><img class="avatar" src="assets/np-logo.png"><h1><b>NP</b> STORE</h1><p>Top Up Game Terpercaya</p></div>
+  <nav class="menu">
+    <button class="active" onclick="goHome()"><span class="ico">⌂</span>Beranda</button>
+    <button onclick="setCat('Cheat')"><span class="ico">🎮</span>Cheat</button>
+    <button onclick="setCat('Account')"><span class="ico">♙</span>Account</button>
+    <button onclick="setCat('Other')"><span class="ico">◇</span>Other</button>
+  </nav>
+  <div class="divider"></div>
+  <nav class="menu">
+    <button onclick="alert('Fitur pesanan tersedia setelah checkout.')"><span class="ico">▣</span>Pesanan</button>
+    <button onclick="alert('Hubungi support NP Store untuk bantuan.')"><span class="ico">♧</span>Bantuan</button>
+    <button onclick="alert('Akun pelanggan akan terhubung pada versi online.')"><span class="ico">♙</span>Akun Saya</button>
+  </nav>
+  <div class="divider"></div>
+  <button class="menu" style="display:flex;background:none;color:var(--red);padding:11px 10px" onclick="logout()"><span class="ico">↪</span>Logout</button>
+  <div class="help"><b>Butuh bantuan?</b><small>Kami siap membantu 24/7</small><button onclick="alert('Hubungi: support@npstore.id')">◉ Hubungi Kami</button></div>
+</aside>
+<div class="drawer-overlay" onclick="closeDrawer()"></div>
+<div class="main">
+<header class="top">
+  <button class="hamb" onclick="toggleDrawer()">☰</button>
+  <div class="mobile-brand"><img src="assets/np-logo.png"><span><b>NP</b> STORE</span></div>
+  <div class="search"><span>⌕</span><input id="search" placeholder="Cari produk..."></div>
+  <div class="top-actions"><button class="icon-btn" aria-label="Keranjang" onclick="openCart()">🛒<span class="cart-badge" id="cartBadge">0</span></button><button class="icon-btn" onclick="alert('Akun pelanggan akan tersedia pada versi online.')">♙</button><button class="dev" onclick="openLogin()">Developer</button></div>
+</header>
+<main id="store" class="content">
+  <div class="preview">🧪 <b>MODE PREVIEW HP</b> — BUILD BY Humman AND Ai.</div>
+  <section class="hero"><div class="hero-copy"><small>SELAMAT DATANG DI</small><h2><b>NP</b> STORE</h2><p>TOP UP GAME TERLENGKAP<br>DAN TERPERCAYA</p><div class="hero-line"></div></div></section>
+  <div class="section-head"><h2>KATEGORI</h2></div>
+  <section class="categories" id="homeCategories"></section>
+  <section id="hierarchy" class="hierarchy" style="display:none">
+    <div class="hierarchy-head"><button class="hierarchy-back" onclick="hierBack()">←</button><div><div class="hierarchy-title" id="hierTitle">KATALOG</div><div class="hierarchy-sub" id="hierSub">Pilih katalog</div></div></div>
+    <div class="hierarchy-grid" id="hierGrid"></div>
+  </section>
+  <div id="homeProducts" class="home-products hidden"><div class="section-head"><h2>PRODUK TERPOPULER</h2><button class="link" onclick="setCat('Semua')">Lihat Semua →</button></div>
+  <section class="product-row" id="popular"></section>
+  <div class="section-head"><h2>SEMUA PRODUK</h2><select class="sort" id="sort" onchange="render()"><option value="new">Terbaru</option><option value="price">Harga terendah</option></select></div>
+  <div class="filters" id="filters"></div>
+  <section class="grid" id="grid"></section></div>
+</main>
+<footer class="footer">
+ <div><div class="footer-brand"><img src="assets/np-logo.png"><div><b>NP</b> STORE<br><small>Top Up Game Terpercaya</small></div></div></div>
+ <div><h3>INFORMASI</h3><ul><li>Tentang Kami</li><li>Syarat & Ketentuan</li><li>Kebijakan Privasi</li></ul></div>
+ <div><h3>LAYANAN</h3><ul><li>Cara Pembelian</li><li>Metode Pembayaran</li><li>Refund & Garansi</li></ul></div>
+ <div><h3>HUBUNGI KAMI</h3><p>Email: support@npstore.id<br>WhatsApp: 0812-3456-7890</p></div>
+ <div class="footer-bottom">© 2026 NP STORE. All rights reserved.</div>
+</footer>
+<div class="mobile-nav"><button class="active" onclick="goHome()"><span>⌂</span>Store</button><button onclick="alert('Belum ada pesanan pada preview.')"><span>▣</span>Pesanan</button><button onclick="alert('Akun pelanggan akan tersedia pada versi online.')"><span>♙</span>Akun</button></div>
+</div></div>
+
+<section id="admin" class="admin"><div class="adminbar"><div style="max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center"><b>⚙ Developer Dashboard</b><button class="small" onclick="logout()">Keluar</button></div></div><div class="content"><div class="admin-grid"><div class="panel"><h2 id="formTitle">Tambah Produk</h2><input type="hidden" id="editId"><div class="field"><label>Nama produk</label><input id="pName"></div><div class="field"><label>Harga utama</label><input id="pPrice" type="number"></div><div class="field"><label>Kategori</label><select id="pCategory"><option>Cheat</option><option>Account</option><option>Other</option></select></div><div class="field"><label>URL gambar</label><input id="pImage"></div><div class="field"><label>Badge</label><input id="pBadge"></div><div class="field"><label>Deskripsi</label><textarea id="pDescription" rows="3"></textarea></div><div class="field"><label>Fitur, pisahkan koma</label><input id="pFeatures"></div><div class="field"><label>Durasi / stok / link download</label><div id="durationEditor"></div><button class="small" onclick="addDurationField()">+ Tambah durasi</button></div><div class="actions"><button class="small" onclick="resetForm()">Reset</button><button class="primary" onclick="saveProduct()">Simpan Produk</button></div></div><div class="panel"><h2>Produk & Stok</h2><div style="overflow:auto"><table><thead><tr><th>Produk</th><th>Kategori</th><th>Stok</th><th>Aksi</th></tr></thead><tbody id="adminRows"></tbody></table></div></div></div></div></section>
+
+
+<div id="cartOverlay" class="cart-overlay" onclick="closeCart()"></div>
+<aside id="cartDrawer" class="cart-drawer" aria-label="Keranjang belanja">
+  <div class="cart-head">
+    <h2>🛒 Keranjang Saya</h2>
+    <button class="cart-close" onclick="closeCart()">×</button>
+  </div>
+  <div id="cartItems" class="cart-items"></div>
+  <div class="cart-foot">
+    <div class="cart-total"><span>Total</span><strong id="cartTotal">Rp0</strong></div>
+    <button class="cart-checkout" onclick="checkoutCart()">Lanjut ke Checkout</button>
+    <button class="cart-clear" onclick="clearCart()">Kosongkan Keranjang</button>
+  </div>
+</aside>
+<div id="cartToast" class="cart-toast"></div>
+
+<div id="loginModal" class="modal"><div class="box"><button class="close" onclick="closeLogin()">×</button><h2>Developer Login</h2><p style="color:#9da1a6">Preview password: <b>dev1234</b></p><div class="field"><label>Password</label><input id="devPass" type="password" onkeydown="if(event.key==='Enter')login()"></div><button class="primary" style="width:100%" onclick="login()">Masuk Dashboard</button></div></div>
+<div id="buyModal" class="modal"><div class="checkout-box"><div class="checkout-head"><button class="back-btn" onclick="closeBuy()">←</button><h2>Checkout</h2><button class="close" onclick="closeBuy()">×</button></div><div class="checkout-product"><div class="checkout-image" id="checkoutImage"></div><div><h3 id="buyTitle"></h3><p id="buyCategory" style="color:#9da1a6"></p><div id="buyStock" class="stock"></div></div></div><div class="checkout-section"><div class="section-title">Tentang Produk</div><p id="buyDescription" class="desc"></p></div><div class="checkout-section"><div class="section-title">Fitur</div><div id="buyFeatures" class="feature-list"></div></div><div class="checkout-section"><div class="section-title">Pilih Durasi</div><div id="durationList" class="duration-list"></div></div><div class="checkout-section quantity-row"><div><div class="section-title" style="margin-bottom:3px">Jumlah</div><small id="quantityStock" style="color:#999"></small></div><div class="stepper"><button onclick="changeQty(-1)">−</button><span id="buyQtyText">1</span><button onclick="changeQty(1)">+</button></div></div><div class="checkout-section"><div class="section-title">Email / ID Pengiriman</div><input id="buyerId" class="checkout-input" placeholder="Masukkan email atau ID akun"></div><div class="checkout-total"><span>Total Pembayaran</span><strong id="checkoutTotal">Rp0</strong></div><button class="checkout-cart-btn" onclick="addSelectedToCart()">＋ Tambah ke Keranjang</button><button class="checkout-order" onclick="placeOrder()">Buat Pesanan</button></div></div>
+<script>
+const defaults=[
+{id:1,name:'Mobile Legends',category:'Cheat',price:15000,rating:4.9,badge:'TOP',image:'assets/mobile-legends.svg',description:'Produk digital Mobile Legends dengan pengiriman otomatis.',features:['Instant Delivery','Support','Link Download'],durations:[{id:'ml1',label:'6 Jam',price:15000,available:10,bonus:'',downloadUrl:'https://example.com/mobile-legends-6jam'},{id:'ml2',label:'1 Hari',price:25000,available:6,bonus:'+ bonus',downloadUrl:'https://example.com/mobile-legends-1hari'},{id:'ml3',label:'7 Hari',price:90000,available:3,bonus:'+ bonus',downloadUrl:'https://example.com/mobile-legends-7hari'}]},
+{id:2,name:'Free Fire',category:'Cheat',price:15000,rating:4.8,badge:'TOP',image:'assets/free-fire.svg',description:'Produk digital Free Fire dengan pilihan durasi.',features:['Instant Delivery','Support','Download Link'],durations:[{id:'ff1',label:'1 Hari',price:15000,available:8,downloadUrl:'https://example.com/free-fire-1hari'},{id:'ff2',label:'7 Hari',price:75000,available:4,bonus:'+ bonus',downloadUrl:'https://example.com/free-fire-7hari'}]},
+{id:3,name:'PUBG Mobile',category:'Cheat',price:15000,rating:4.7,badge:'TOP',image:'assets/pubg-mobile.svg',description:'Produk digital PUBG Mobile.',features:['Instant Delivery','Support'],durations:[{id:'pub1',label:'1 Hari',price:15000,available:8,downloadUrl:'https://example.com/pubg-1hari'},{id:'pub2',label:'7 Hari',price:80000,available:4,downloadUrl:'https://example.com/pubg-7hari'},{id:'pub3',label:'30 Hari',price:250000,available:1,downloadUrl:'https://example.com/pubg-30hari'}]},
+{id:4,name:'Call of Duty Mobile',category:'Cheat',price:15000,rating:4.8,badge:'TOP',image:'assets/call-of-duty.svg',description:'Produk digital Call of Duty Mobile.',features:['Instant Delivery','Support'],durations:[{id:'cod1',label:'1 Hari',price:15000,available:7,downloadUrl:'https://example.com/cod-1hari'},{id:'cod2',label:'7 Hari',price:85000,available:3,downloadUrl:'https://example.com/cod-7hari'}]},
+{id:5,name:'eFootball 2024',category:'Cheat',price:15000,rating:4.8,badge:'NEW',image:'assets/efootball.svg',description:'Produk digital eFootball 2024.',features:['Instant Delivery','Support'],durations:[{id:'ef1',label:'1 Hari',price:15000,available:6,downloadUrl:'https://example.com/efootball-1hari'},{id:'ef2',label:'7 Hari',price:80000,available:2,downloadUrl:'https://example.com/efootball-7hari'}]},
+{id:6,name:'Honkai Impact 3',category:'Account',price:15000,rating:4.9,badge:'ACCOUNT',image:'assets/honkai-impact-3.jpg',description:'Akun game digital siap diproses setelah pembayaran.',features:['Akun Siap Pakai','Instant Delivery','Support'],durations:[{id:'hi1',label:'1 Akun',price:15000,available:5,downloadUrl:'https://example.com/honkai-account'}]},
+{id:7,name:'Genshin Impact',category:'Account',price:15000,rating:4.9,badge:'ACCOUNT',image:'assets/other.svg',description:'Akun game digital Genshin Impact.',features:['Akun Siap Pakai','Support'],durations:[{id:'gi1',label:'1 Akun',price:15000,available:4,downloadUrl:'https://example.com/genshin-account'}]},
+{id:8,name:'HOK (Honor of Kings)',category:'Other',price:15000,rating:4.8,badge:'OTHER',image:'assets/hok.jpg',description:'Produk digital HOK.',features:['Instant Delivery','Support'],durations:[{id:'hok1',label:'1 Hari',price:15000,available:5,downloadUrl:'https://example.com/hok-1hari'},{id:'hok2',label:'7 Hari',price:75000,available:2,downloadUrl:'https://example.com/hok-7hari'}]}
+];
+let products=JSON.parse(localStorage.getItem('npstore_products')||'null')||defaults,activeCategory='Semua',buyingId=null,selectedDuration=0,buyQty=1;
+let cart=JSON.parse(localStorage.getItem('npstore_cart')||'[]');
+function saveCart(){localStorage.setItem('npstore_cart',JSON.stringify(cart));updateCartUI()}
+function cartCount(){return cart.reduce((n,x)=>n+x.qty,0)}
+function cartTotal(){return cart.reduce((n,x)=>n+(x.price*x.qty),0)}
+function updateCartUI(){
+  const badge=document.getElementById('cartBadge');
+  if(badge) badge.textContent=cartCount();
+  const total=document.getElementById('cartTotal');
+  if(total) total.textContent=rupiah(cartTotal());
+  const box=document.getElementById('cartItems');
+  if(!box)return;
+  if(!cart.length){
+    box.innerHTML='<div class="cart-empty"><div><strong>Keranjang masih kosong</strong><span>Tambahkan produk yang kamu inginkan dari katalog.</span></div></div>';
+    return;
+  }
+  box.innerHTML=cart.map((x,i)=>`
+    <div class="cart-item">
+      <div class="cart-item-img"><img src="${esc(x.image||'assets/other.svg')}" onerror="this.style.display='none'"></div>
+      <div>
+        <h3>${esc(x.name)}</h3>
+        <div class="meta">${esc(x.duration)} · ${esc(x.category||'Produk')}</div>
+        <div class="cart-price">${rupiah(x.price)} / item</div>
+        <div class="cart-item-actions">
+          <button onclick="changeCartQty(${i},-1)">−</button>
+          <span>${x.qty}</span>
+          <button onclick="changeCartQty(${i},1)">+</button>
+        </div>
+      </div>
+      <button class="cart-remove" onclick="removeCartItem(${i})">×</button>
+    </div>`).join('');
+}
+function openCart(){updateCartUI();document.getElementById('cartDrawer').classList.add('show');document.getElementById('cartOverlay').classList.add('show')}
+function closeCart(){document.getElementById('cartDrawer').classList.remove('show');document.getElementById('cartOverlay').classList.remove('show')}
+function showCartToast(msg){const t=document.getElementById('cartToast');t.textContent=msg;t.classList.add('show');clearTimeout(window.__cartToast);window.__cartToast=setTimeout(()=>t.classList.remove('show'),1600)}
+function addToCart(productId,durationIndex=0,qty=1){
+  const p=products.find(x=>x.id===productId),d=p?.durations?.[durationIndex];
+  if(!p||!d||d.available<1){alert('Produk atau stok tidak tersedia.');return false}
+  const existing=cart.find(x=>x.productId===productId&&x.durationId===d.id);
+  const current=existing?existing.qty:0;
+  if(current+qty>d.available){alert('Jumlah melebihi stok yang tersedia.');return false}
+  if(existing)existing.qty+=qty;
+  else cart.push({productId:p.id,durationId:d.id,name:p.name,category:p.category,image:p.image,duration:d.label,price:d.price,qty});
+  saveCart();showCartToast('Produk ditambahkan ke keranjang ✓');return true
+}
+function addSelectedToCart(){
+  if(!buyingId)return;
+  if(addToCart(buyingId,selectedDuration,buyQty)) closeBuy();
+}
+function changeCartQty(index,delta){
+  const x=cart[index],p=products.find(v=>v.id===x.productId),d=p?.durations?.find(v=>v.id===x.durationId);
+  if(!d)return removeCartItem(index);
+  const next=x.qty+delta;
+  if(next<1)return removeCartItem(index);
+  if(next>d.available){alert('Stok tidak mencukupi.');return}
+  x.qty=next;saveCart();
+}
+function removeCartItem(index){cart.splice(index,1);saveCart()}
+function clearCart(){if(!cart.length)return;if(confirm('Kosongkan semua isi keranjang?')){cart=[];saveCart()}}
+function checkoutCart(){
+  if(!cart.length){showCartToast('Keranjang masih kosong');return}
+  const x=cart[0];
+  closeCart();
+  openBuy(x.productId);
+  const p=products.find(v=>v.id===x.productId),idx=(p?.durations||[]).findIndex(d=>d.id===x.durationId);
+  if(idx>=0){selectedDuration=idx;buyQty=x.qty;renderDurations();document.getElementById('buyQtyText').textContent=buyQty;updateTotal()}
+}
+
+const rupiah=n=>new Intl.NumberFormat('id-ID',{style:'currency',currency:'IDR',maximumFractionDigits:0}).format(n);const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+function persist(){localStorage.setItem('npstore_products',JSON.stringify(products))}function goHome(){closeDrawer();document.getElementById('admin').classList.remove('show');document.getElementById('store').style.display='block';render();scrollTo({top:0,behavior:'smooth'})}
+function setCat(v){activeCategory=v;closeDrawer();render();document.getElementById('grid').scrollIntoView({behavior:'smooth',block:'start'})}function render(){const q=document.getElementById('search').value.toLowerCase(),sort=document.getElementById('sort')?.value||'new';let list=products.filter(p=>(activeCategory==='Semua'||p.category===activeCategory)&&p.name.toLowerCase().includes(q));if(sort==='price')list.sort((a,b)=>a.price-b.price);document.getElementById('filters').innerHTML=['Semua','Cheat','Account','Other'].map(c=>`<button class="filter ${c===activeCategory?'active':''}" onclick="setCat('${c}')">${c}</button>`).join('');document.getElementById('popular').innerHTML=products.slice(0,4).map(card).join('');document.getElementById('grid').innerHTML=list.length?list.map(card).join(''):'<div class="empty">Produk tidak ditemukan.</div>'}
+function card(p){const stock=(p.durations||[]).reduce((n,d)=>n+d.available,0);return `<article class="product"><div class="pic"><img src="${esc(p.image)}" onerror="this.style.display='none'"><span class="topbadge">★ ${esc(p.badge||'TOP')}</span></div><div class="pbody"><h3>${esc(p.name)}</h3><div class="rating"><span>★</span> ${p.rating||4.8}</div><div class="price">${rupiah(p.price)} <span class="tag">${esc(p.category)}</span></div><div class="stock">${stock?`Stok ${stock} item`:'Stok habis'}</div><button class="buy" ${stock<1?'disabled':''} onclick="openBuy(${p.id})">${stock?'Beli Sekarang':'Stok Habis'}</button><button class="add-cart" ${stock<1?'disabled':''} onclick="addToCart(${p.id},0)">${stock?'＋ Tambah ke Keranjang':'Stok Habis'}</button></div></article>`}
+document.getElementById('search').oninput=render;
+function openLogin(){document.getElementById('loginModal').classList.add('show');document.getElementById('devPass').focus()}function closeLogin(){document.getElementById('loginModal').classList.remove('show')}function login(){if(document.getElementById('devPass').value!=='dev1234')return alert('Password demo salah. Gunakan: dev1234');closeLogin();document.getElementById('store').style.display='none';document.getElementById('admin').classList.add('show');renderAdmin()}
+function logout(){document.getElementById('admin').classList.remove('show');document.getElementById('store').style.display='block';render()}
+function toggleDrawer(){const s=document.querySelector('.sidebar'),o=document.querySelector('.drawer-overlay');const open=!s.classList.contains('open');s.classList.toggle('open',open);o.classList.toggle('show',open)}function closeDrawer(){document.querySelector('.sidebar').classList.remove('open');document.querySelector('.drawer-overlay').classList.remove('show')}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDrawer()});
+function resetForm(){['editId','pName','pPrice','pImage','pBadge','pDescription','pFeatures'].forEach(id=>document.getElementById(id).value='');document.getElementById('pCategory').value='Cheat';document.getElementById('formTitle').textContent='Tambah Produk';durationFields()}
+function durationFields(values){const box=document.getElementById('durationEditor');box.innerHTML='';(values||[{label:'1 Hari',price:15000,available:5,bonus:'',downloadUrl:''}]).forEach(addDurationField)}function addDurationField(v={label:'',price:'',available:0,bonus:'',downloadUrl:'',id:''}){const row=document.createElement('div');row.style.cssText='display:grid;grid-template-columns:1fr 1fr 80px 1.4fr auto;gap:6px;margin-bottom:7px';row.innerHTML=`<input class="d-id" type="hidden" value="${esc(v.id)}"><input class="d-label" placeholder="Durasi" value="${esc(v.label)}"><input class="d-price" type="number" placeholder="Harga" value="${v.price}"><input class="d-stock" type="number" min="0" placeholder="Stok" value="${v.available??0}"><input class="d-url" placeholder="Link download" value="${esc(v.downloadUrl||'')}"><button class="small danger" onclick="this.parentElement.remove()">×</button>`;document.getElementById('durationEditor').appendChild(row)}
+function readDurations(){return [...document.querySelectorAll('#durationEditor>div')].map(r=>({id:r.querySelector('.d-id').value||'d'+Date.now()+Math.random(),label:r.querySelector('.d-label').value.trim(),price:+r.querySelector('.d-price').value,available:+r.querySelector('.d-stock').value,downloadUrl:r.querySelector('.d-url').value.trim()})).filter(d=>d.label&&d.price>=0)}
+function saveProduct(){const id=document.getElementById('editId').value,data={name:document.getElementById('pName').value.trim(),price:+document.getElementById('pPrice').value,category:document.getElementById('pCategory').value,image:document.getElementById('pImage').value.trim(),badge:document.getElementById('pBadge').value.trim(),description:document.getElementById('pDescription').value.trim(),features:document.getElementById('pFeatures').value.split(',').map(x=>x.trim()).filter(Boolean),rating:4.8,durations:readDurations()};if(!data.name)return alert('Nama produk wajib diisi');if(id){const i=products.findIndex(x=>x.id==id);products[i]={...products[i],...data}}else{data.id=Date.now();products.push(data)}persist();render();renderAdmin();updateCartUI();resetForm();alert('Produk tersimpan di perangkat ini.')}
+function editProduct(id){const p=products.find(x=>x.id===id);document.getElementById('editId').value=p.id;document.getElementById('pName').value=p.name;document.getElementById('pPrice').value=p.price;document.getElementById('pCategory').value=p.category;document.getElementById('pImage').value=p.image||'';document.getElementById('pBadge').value=p.badge||'';document.getElementById('pDescription').value=p.description||'';document.getElementById('pFeatures').value=(p.features||[]).join(', ');durationFields(p.durations);document.getElementById('formTitle').textContent='Edit Produk'}function delProduct(id){if(confirm('Hapus produk ini?')){products=products.filter(x=>x.id!==id);persist();render();renderAdmin()}}
+function renderAdmin(){if(!document.getElementById('durationEditor').children.length)durationFields();document.getElementById('adminRows').innerHTML=products.map(p=>`<tr><td><b>${esc(p.name)}</b></td><td>${esc(p.category)}</td><td>${(p.durations||[]).reduce((n,d)=>n+d.available,0)}</td><td><button class="small" onclick="editProduct(${p.id})">Edit</button> <button class="small danger" onclick="delProduct(${p.id})">Hapus</button></td></tr>`).join('')}
+function openBuy(id){buyingId=id;buyQty=1;selectedDuration=0;const p=products.find(x=>x.id===id);document.getElementById('buyTitle').textContent=p.name;document.getElementById('buyCategory').textContent=p.category;document.getElementById('buyDescription').textContent=p.description;document.getElementById('buyFeatures').innerHTML=(p.features||[]).map(x=>`<span class="feature">✓ ${esc(x)}</span>`).join('');document.getElementById('checkoutImage').innerHTML=`<img src="${esc(p.image)}">`;document.getElementById('buyerId').value='';renderDurations();document.getElementById('buyModal').classList.add('show')}
+function renderDurations(){const p=products.find(x=>x.id===buyingId);document.getElementById('durationList').innerHTML=(p.durations||[]).map((d,i)=>`<button class="duration ${i===selectedDuration?'selected':''}" ${d.available<1?'disabled':''} onclick="selectDuration(${i})"><span><b>${esc(d.label)}</b><br><small class="bonus">Stok ${d.available}</small></span><span class="d-price">${rupiah(d.price)}</span></button>`).join('');updateTotal()}
+function selectDuration(i){const p=products.find(x=>x.id===buyingId);if(!p.durations[i]||p.durations[i].available<1)return;selectedDuration=i;buyQty=1;renderDurations();document.getElementById('buyQtyText').textContent=1}function changeQty(d){const p=products.find(x=>x.id===buyingId),x=p.durations[selectedDuration];buyQty=Math.min(Math.max(1,buyQty+d),Math.max(1,x.available));document.getElementById('buyQtyText').textContent=buyQty;updateTotal()}function updateTotal(){const p=products.find(x=>x.id===buyingId),d=p?.durations[selectedDuration];document.getElementById('quantityStock').textContent=d?`Maks. ${d.available} item`:'';document.getElementById('checkoutTotal').textContent=rupiah((d?.price||0)*buyQty)}function closeBuy(){document.getElementById('buyModal').classList.remove('show')}
+function placeOrder(){const p=products.find(x=>x.id===buyingId),d=p?.durations[selectedDuration],buyer=document.getElementById('buyerId').value.trim();if(!buyer)return alert('Isi email / ID pengiriman.');if(!d||d.available<buyQty)return alert('Stok tidak cukup.');d.available-=buyQty;cart=cart.filter(x=>!(x.productId===p.id&&x.durationId===d.id));persist();saveCart();closeBuy();location.href='preview-success.html?'+new URLSearchParams({demo:'1',product:p.name,duration:d.label,qty:buyQty,download:d.downloadUrl}).toString()}
+render();renderAdmin();
+</script>
+<script>
+const NP_HIERARCHY={
+  "Free Fire":{"icon":"assets/free-fire.svg","variants":{"Free Fire Biasa":[2],"Free Fire MAX":[2]}},
+  "Mobile Legends":{"icon":"assets/mobile-legends.svg","variants":{"Mobile Legends Biasa":[1],"Mobile Legends Variant":[1]}},
+  "PUBG Mobile":{"icon":"assets/pubg-mobile.svg","variants":{"PUBG Mobile Biasa":[3],"PUBG Mobile Variant":[3]}},
+  "Call of Duty":{"icon":"assets/call-of-duty.svg","variants":{"Call of Duty Mobile":[4]}},
+  "eFootball":{"icon":"assets/efootball.svg","variants":{"eFootball 2024":[5]}},
+  "Other":{"icon":"assets/other.svg","variants":{"Other Products":[6]}}
+};
+let hierLevel=0,hierGame='',hierVariant='';
+function hideHomeProducts(){document.getElementById('homeProducts').style.display='none';document.getElementById('filters').style.display='none'}
+function showHomeProducts(){document.getElementById('homeProducts').style.display='block';document.getElementById('filters').style.display='flex'}
+function homeCategories(){
+ const el=document.getElementById('homeCategories');
+ el.innerHTML=Object.entries(NP_HIERARCHY).map(([name,g])=>{
+   const safe=name.replace(/'/g,"\\'");
+   return `<button class="cat" onclick="openGame('${safe}')">
+     <span class="cat-bg" style="background-image:url('${g.icon}')"></span>
+     <span class="cat-content"><b>${name.toUpperCase()}</b><small>Lihat Katalog →</small></span>
+   </button>`;
+ }).join('');
+}
+function openGame(game){hierLevel=1;hierGame=game;hierVariant='';document.getElementById('homeCategories').style.display='none';hideHomeProducts();document.getElementById('hierarchy').style.display='block';document.getElementById('hierTitle').textContent=game;document.getElementById('hierSub').textContent='Pilih versi';document.getElementById('hierGrid').innerHTML=Object.entries(NP_HIERARCHY[game].variants).map(([v,ids])=>`<button class="hier-card" onclick="openVariant('${v.replace(/'/g,"\\'")}')"><span class="hier-icon"><img src="${NP_HIERARCHY[game].icon}" onerror="this.style.display=\'none\'"></span><span><b>${v}</b><small>Lihat katalog ${v}</small></span><span class="hier-arrow">›</span></button>`).join('');scrollTo({top:0,behavior:'smooth'})}
+function openVariant(v){hierLevel=2;hierVariant=v;const ids=NP_HIERARCHY[hierGame].variants[v];document.getElementById('hierTitle').textContent=v;document.getElementById('hierSub').textContent=hierGame+' · Pilih produk';document.getElementById('hierGrid').innerHTML=ids.map(id=>{const p=products.find(x=>x.id===id);return p?`<button class="hier-card" onclick="openBuy(${p.id})"><span class="hier-icon"><img src="${p.image}"></span><span><b>${esc(p.name)}</b><small>Pilih produk untuk melihat durasi</small></span><span class="hier-arrow">›</span></button>`:''}).join('');scrollTo({top:0,behavior:'smooth'})}
+function hierBack(){if(hierLevel===2){openGame(hierGame)}else{hierLevel=0;document.getElementById('hierarchy').style.display='none';document.getElementById('homeCategories').style.display='grid';showHomeProducts();scrollTo({top:0,behavior:'smooth'})}}
+function goHome(){closeDrawer();document.getElementById('admin').classList.remove('show');document.getElementById('store').style.display='block';document.getElementById('hierarchy').style.display='none';document.getElementById('homeCategories').style.display='grid';showHomeProducts();homeCategories();scrollTo({top:0,behavior:'smooth'})}
+// Make the initial page strictly category-only for navigation.
+document.addEventListener('DOMContentLoaded',()=>{homeCategories();hideHomeProducts();});
+</script>
+
+
+
+</body></html>
